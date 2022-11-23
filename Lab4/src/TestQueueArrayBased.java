@@ -2,8 +2,8 @@
 public class TestQueueArrayBased {
 	public static void main(String[] args) {
 		QueueArrayBased queue1 = new QueueArrayBased();
-		//String s ="sarah";  //not palandrone test
-		String s = "wow";	//is palandrone test
+		String s ="sarah";  //not palandrone test
+		//String s = "wow";	//is palandrone test
 		
 		//testing methods from QueueArrayBased
 		System.out.println("Is empty: " + queue1.isEmpty());

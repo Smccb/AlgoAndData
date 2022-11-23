@@ -2,56 +2,55 @@
 
 public class TreeNode
 {
-  /*private int itemFreq;
-  private char charItem;*/
-  private Object item;
+  private int freq;
+  private char letter;
   private TreeNode leftChild;
   private TreeNode rightChild;
 
-  public TreeNode(int newItem)
+  public TreeNode(int newFreq, char newLetter)
   {
   // Initializes tree node with item and no children.
-    /*itemFreq = newItem;
-    charItem = newCharItem;*/
-	item = newItem;
+    freq = newFreq;
+    letter = newLetter;
     leftChild  = null;
     rightChild = null;
   }  // end constructor
-
-  public TreeNode(int newItem,TreeNode left, TreeNode right)
+ 
+  public TreeNode(int newFreq, char newLetter,
+                  TreeNode left, TreeNode right)
                   {
   // Initializes tree node with item and
   // the left and right children references.
-    //itemFreq = newItem;
-	item = newItem;
+    freq = newFreq;
+    letter = newLetter;
     leftChild  = left;
     rightChild = right;
   }  // end constructor
 
-  public Object getItem()
+  public int getFreq()
   {
   // Returns the item field.
-    //return itemFreq;
-	  return item;
+    return freq;
   }  // end getItem
 
-  public void setItem(int newItem)
+  public void setItem(int newFreq)
   {
   // Sets the item field to the new value newItem.
-	 // itemFreq  = newItem;
-	  item = newItem;
+  freq  = newFreq;
   }  // end setItem
-  /*public Object getCharItem()
+  
+  public int getLetter()
   {
   // Returns the item field.
-    return charItem;
+    return letter;
   }  // end getItem
 
-  public void setCharItem(char newCharItem)
+  public void setLetter(char newLetter)
   {
   // Sets the item field to the new value newItem.
-  charItem  = newCharItem;
-  }*/
+  letter  = newLetter;
+  }
+
   public TreeNode getLeft()
   {
   // Returns the reference to the left child.

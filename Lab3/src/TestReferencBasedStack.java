@@ -2,8 +2,8 @@
 public class TestReferencBasedStack {
 	public static void main(String[] args) {
 		StackReferenceBased stack1 = new StackReferenceBased();
-		String s = "{123{}";
-		//String s = "{ { } }";
+		//String s = "{123{}";
+		String s = "{ { } }";
 		//String s = " ";
 		//String s = "{ ";
 		

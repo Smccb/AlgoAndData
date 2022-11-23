@@ -3,8 +3,13 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JFrame;
+
 public class Main {
 	public static void main(String[] args) {
+		//Gui gui = new Gui();
+		//gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		try {
 			readFromFile();
 		} catch (Exception e) {
@@ -13,6 +18,9 @@ public class Main {
 		}
 	}
 	
+	
+	
+	
 	//read file in + create tree node object
 	public static TreeNode readFromFile() throws Exception {
 		List<String> treeNodeList = new ArrayList();
@@ -20,18 +28,19 @@ public class Main {
 		BufferedReader reader = new BufferedReader(new FileReader("LetterCountAscending.txt"));
 		
 		
-		Object st;
-		st = reader.readLine();
+		
+		
+		/*st = reader.readLine();
 		
 		char charItem = ((String) st).charAt(0);
-		/*int i=1, j=0; char [] temp = null;
-		while(i < st.length()) {
+		int i=1, j=0; char [] temp = new char[26];
+		while(i < ((String) st).length()) {
 			
-			if(st.charAt(i) != '	') {
+			if(((String) st).charAt(i) != '	') {
 				
-				System.out.println("character: "+ st.charAt(i));
+				System.out.println("character: "+ ((String) st));
 				
-				temp[j] = st.charAt(i);
+				temp[j] = ((String) st).charAt(i);
 				j++;
 			}
 			i++;
@@ -50,7 +59,7 @@ public class Main {
 		
 		return null;
 	}
-	
+
 	
 	public void createTree() {
 		
