@@ -1,1 +1,1 @@
-3rd year Algorithms and datastructures Labs 1-4
+Algorithms and datastructures, labs 1-4 and assignment 1.
