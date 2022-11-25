@@ -3,7 +3,7 @@
 public class TreeNode
 {
   private int freq;
-  private char letter;
+  private char symbols;
   private TreeNode leftChild;
   private TreeNode rightChild;
 
@@ -11,7 +11,7 @@ public class TreeNode
   {
   // Initializes tree node with item and no children.
     freq = newFreq;
-    letter = newLetter;
+    symbols = newLetter;
     leftChild  = null;
     rightChild = null;
   }  // end constructor
@@ -22,7 +22,7 @@ public class TreeNode
   // Initializes tree node with item and
   // the left and right children references.
     freq = newFreq;
-    letter = newLetter;
+    symbols = newLetter;
     leftChild  = left;
     rightChild = right;
   }  // end constructor
@@ -42,13 +42,13 @@ public class TreeNode
   public int getLetter()
   {
   // Returns the item field.
-    return letter;
+    return symbols;
   }  // end getItem
 
   public void setLetter(char newLetter)
   {
   // Sets the item field to the new value newItem.
-  letter  = newLetter;
+  symbols  = newLetter;
   }
 
   public TreeNode getLeft()
