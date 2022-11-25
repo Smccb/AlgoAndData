@@ -7,10 +7,12 @@ import javax.swing.JFrame;//used for gui
 
 public class Main {
 	
-	
+	//lookup tables for encoding/ decoding
+	ArrayList<Character> symbols = new ArrayList<Character>();//holding symbols
+	ArrayList<String> codes = new ArrayList<String>();//holding codes calculated from tree
 	
 	public static void main(String[] args) {
-		//Gui gui = new Gui();
+		//Gui gui = new Gui();//call to gui class
 		//gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		try {
@@ -49,26 +51,27 @@ public class Main {
 	
 	//read file in to letters, freq arrayLists
 	public static void readFromFile() throws FileNotFoundException {
-		ArrayList<Character> symbols= new ArrayList<Character>();//store letters
-		ArrayList<Integer> freq= new ArrayList<Integer>();//store letters
+		ArrayList<Character> letters= new ArrayList<Character>();//store letters
+		ArrayList<Integer> freq= new ArrayList<Integer>();//store frequencies
 		
 		File file = new File("LetterCountAscending.txt");
 		Scanner in = new Scanner(file);
 
 	    while(in.hasNext()){
 	        String[] tokens = in.nextLine().split("\t");
-	        String first = tokens[tokens.length -2];
-	        String last = tokens[tokens.length - 1];
+	        String first = tokens[tokens.length -2];//letters string
+	        String last = tokens[tokens.length - 1];//freq string
 	        
 	        
-	        symbols.add(first.charAt(0));
+	        letters.add(first.charAt(0));
 	        int temp = Integer.parseInt(last);
 	        freq.add(temp);
 	    }
 		
 		
-		for (int i = 0; i < symbols.size(); i++) {
-			System.out.println(symbols.get(i));
+	    //printing for testing
+		for (int i = 0; i < letters.size(); i++) {
+			System.out.println(letters.get(i));
 			System.out.println(freq.get(i));
 		}
 	}
