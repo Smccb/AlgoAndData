@@ -33,7 +33,7 @@ public class TreeNode
     return freq;
   }  // end getItem
 
-  public void setItem(int newFreq)
+  public void setFreq(int newFreq)
   {
   // Sets the item field to the new value newItem.
   freq  = newFreq;
