@@ -1,10 +1,10 @@
-public class StackReferenceBased implements StackInterface
+public class StackReferenceBased
 {
-  private TreeNode root;
+  private Node top;
 
   public StackReferenceBased()
   {
-    root = null;
+    top = null;
   }  // end default constructor
   //============================================================================
   //============================================================================
@@ -12,15 +12,15 @@ public class StackReferenceBased implements StackInterface
 
   public boolean isEmpty()
   {
-    return root ==  null;
+    return top ==  null;
   }  // end isEmpty
 //============================================================================
 //============================================================================
 //============================================================================
 
-  public void push(TreeNode newTreeNode)
+  public void push(Object newItem)
   {
-    root = new TreeNode(newTreeNode, root);
+    top = new Node(newItem, top);
   }  // end push
   //============================================================================
   //============================================================================
@@ -30,8 +30,8 @@ public class StackReferenceBased implements StackInterface
   {
     if (!isEmpty())
     {
-      TreeNode temp = root;
-      root = root.getNext();
+      Node temp = top;
+      top = top.getNext();
       return temp.getItem();
     }
     else
@@ -45,7 +45,7 @@ public class StackReferenceBased implements StackInterface
 
   public void popAll()
   {
-    root = null;
+    top = null;
   }  // end popAll
 
 //============================================================================
@@ -55,7 +55,7 @@ public class StackReferenceBased implements StackInterface
   {
     if (!isEmpty())
     {
-      return root.getItem();
+      return top.getItem();
     }
     else
     {
@@ -70,7 +70,7 @@ public class StackReferenceBased implements StackInterface
   
   //display stack
   public void displayStack(StackReferenceBased stack1) {
-	  Node current = root;
+	  Node current = top;
 	  while(current != null) {
 		  System.out.println(current.getItem());
 		  current = current.getNext();
